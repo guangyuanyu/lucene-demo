@@ -1,0 +1,15 @@
+**logs
+**.idea
+**.ipr
+**.iws
+**.iml
+**.settings
+**.project
+**.classpath
+**.DS_Store
+**.externalToolBuilders
+**.springBeans
+**.bak
+**/bin/**
+**/target
+**/test-output
