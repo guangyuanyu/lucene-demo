@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * Hello world!
- *
  */
 public class App {
 
@@ -18,7 +17,7 @@ public class App {
 
     private DocSearcher docSearcher = new DocSearcher();
 
-    public static void main( String[] args ) throws Exception {
+    public static void main(String[] args) throws Exception {
         App app = new App();
         app.run();
     }

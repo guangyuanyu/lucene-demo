@@ -13,7 +13,6 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -31,7 +30,7 @@ public class DocIndexer {
 
         IndexWriter indexWriter = new IndexWriter(directory, config);
 
-        for(int i = 0; i < docs.size();i++){
+        for (int i = 0; i < docs.size(); i++) {
             Document doc = new Document();
             //添加字段
             doc.add(new IntField("id", docs.get(i).getId(), Field.Store.YES));
@@ -41,8 +40,8 @@ public class DocIndexer {
         }
 
         indexWriter.commit();
-        System.out.println("共索引了"+indexWriter.numDocs()+"个文件");
+        System.out.println("共索引了" + indexWriter.numDocs() + "个文件");
         indexWriter.close();
-        System.out.println("创建索引所用时间："+(System.currentTimeMillis()-startTime)+"毫秒");
+        System.out.println("创建索引所用时间：" + (System.currentTimeMillis() - startTime) + "毫秒");
     }
 }
